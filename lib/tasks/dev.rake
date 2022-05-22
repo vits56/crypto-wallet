@@ -7,8 +7,8 @@ namespace :dev do
       show_spinner('Apagando Banco de Dados...') { `rails db:drop` }
       show_spinner('Criando Banco de Dados...') { `rails db:create` }
       show_spinner('Migrando Banco de Dados...') { `rails db:migrate` }
-      `rails dev:add_coins`
       `rails dev:add_mining_types`
+      `rails dev:add_coins`
     else
       puts 'Você não está em ambiente de desenvolvimento'
     end
@@ -21,32 +21,38 @@ namespace :dev do
         {
           description: 'Bitcoin',
           acronym: 'BTC',
-          url_image: 'https://www.dhresource.com/0x0/f2/albu/g9/M00/27/85/rBVaVVxO822ACwv4AALYau1h4a8355.jpg'
+          url_image: 'https://www.dhresource.com/0x0/f2/albu/g9/M00/27/85/rBVaVVxO822ACwv4AALYau1h4a8355.jpg',
+          mining_type: MiningType.find_by(acronym: 'PoW')
         },
         {
           description: 'Ethereum',
           acronym: 'ETH',
-          url_image: 'https://image.shutterstock.com/image-photo/image-260nw-748625884.jpg'
+          url_image: 'https://image.shutterstock.com/image-photo/image-260nw-748625884.jpg',
+          mining_type: MiningType.all.sample
         },
         {
           description: 'Litecoin',
           acronym: 'LTC',
-          url_image: 'https://image.shutterstock.com/image-vector/litecoin-symbol-vector-illustration-ltc-260nw-1806389452.jpg'
+          url_image: 'https://image.shutterstock.com/image-vector/litecoin-symbol-vector-illustration-ltc-260nw-1806389452.jpg',
+          mining_type: MiningType.all.sample
         },
         {
           description: 'Bitcoin Cash',
           acronym: 'BCH',
-          url_image: 'https://www.cryptoiqtrading.com/wp-content/uploads/2019/01/BCH-logo.png'
+          url_image: 'https://www.cryptoiqtrading.com/wp-content/uploads/2019/01/BCH-logo.png',
+          mining_type: MiningType.all.sample
         },
         {
           description: 'Tether',
           acronym: 'USDT',
-          url_image: 'https://cdn-icons-png.flaticon.com/512/825/825508.png'
+          url_image: 'https://cdn-icons-png.flaticon.com/512/825/825508.png',
+          mining_type: MiningType.all.sample
         },
         {
           description: 'Stellar',
           acronym: 'XLM',
-          url_image: 'https://ownsnap.com/wp-content/uploads/2021/09/t_stellar-xlm9125.jpeg'
+          url_image: 'https://ownsnap.com/wp-content/uploads/2021/09/t_stellar-xlm9125.jpeg',
+          mining_type: MiningType.all.sample
         }
       ]
 
