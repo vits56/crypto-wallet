@@ -10,40 +10,41 @@
 
 puts 'Seeding database...'
 
-Coin.create!(
-  description: 'Bitcoin',
-  acronym: 'BTC',
-  url_image: 'https://www.dhresource.com/0x0/f2/albu/g9/M00/27/85/rBVaVVxO822ACwv4AALYau1h4a8355.jpg'
-)
+coins = [
+  {
+    description: 'Bitcoin',
+    acronym: 'BTC',
+    url_image: 'https://www.dhresource.com/0x0/f2/albu/g9/M00/27/85/rBVaVVxO822ACwv4AALYau1h4a8355.jpg'
+  },
+  {
+    description: 'Ethereum',
+    acronym: 'ETH',
+    url_image: 'https://image.shutterstock.com/image-photo/image-260nw-748625884.jpg'
+  },
+  {
+    description: 'Litecoin',
+    acronym: 'LTC',
+    url_image: 'https://image.shutterstock.com/image-vector/litecoin-symbol-vector-illustration-ltc-260nw-1806389452.jpg'
+  },
+  {
+    description: 'Bitcoin Cash',
+    acronym: 'BCH',
+    url_image: 'https://www.cryptoiqtrading.com/wp-content/uploads/2019/01/BCH-logo.png'
+  },
+  {
+    description: 'Tether',
+    acronym: 'USDT',
+    url_image: 'https://cdn-icons-png.flaticon.com/512/825/825508.png'
+  },
+  {
+    description: 'Stellar',
+    acronym: 'XLM',
+    url_image: 'https://ownsnap.com/wp-content/uploads/2021/09/t_stellar-xlm9125.jpeg'
+  }
+]
 
-Coin.create!(
-  description: 'Ethereum',
-  acronym: 'ETH',
-  url_image: 'https://image.shutterstock.com/image-photo/image-260nw-748625884.jpg'
-)
-
-Coin.create!(
-  description: 'Litecoin',
-  acronym: 'LTC',
-  url_image: 'https://image.shutterstock.com/image-vector/litecoin-symbol-vector-illustration-ltc-260nw-1806389452.jpg'
-)
-
-Coin.create!(
-  description: 'Bitcoin Cash',
-  acronym: 'BCH',
-  url_image: 'https://www.cryptoiqtrading.com/wp-content/uploads/2019/01/BCH-logo.png'
-)
-
-Coin.create!(
-  description: 'Tether',
-  acronym: 'USDT',
-  url_image: 'https://cdn-icons-png.flaticon.com/512/825/825508.png'
-)
-
-Coin.create!(
-  description: 'Stellar',
-  acronym: 'XLM',
-  url_image: 'https://ownsnap.com/wp-content/uploads/2021/09/t_stellar-xlm9125.jpeg'
-)
+coins.each do |coin|
+  Coin.find_or_create_by(coin)
+end
 
 puts 'Seeding database...DONE'
