@@ -1,21 +1,14 @@
 <h1>Seja Bem-Vindo!</h1>
-
-<p><strong>Data: </strong><%= data_br(Date.today) %></p>
-
+<p>O idioma usada nessa aplicação é: <strong><%= locale(I18n.locale) %></strong></p>
+<p><strong>Data: </strong><%= Date.today %></p>
 <h2>Crypto Wallet</h2>
-
 <%= render "menu"%>
-
 <p>
   Você está em ambiente de : <%= ambiente_rails %>
 </p>
-
 <p>
   Eu sou uma variável de instância/sessão <strong><%= @meu_nome %></strong>
 </p>
-
 <p>
   Eu sou uma variável de instância/sessão <strong><%= @curso %></strong>
 </p>
-
-

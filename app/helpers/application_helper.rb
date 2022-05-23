@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+  def locale(locale)
+    I18n.locale == :en ? "English" : "Português do Brasil"
+  end
+
   def data_br(data_us)
     data_us.strftime('%d/%m/%Y')
   end
@@ -14,4 +18,5 @@ module ApplicationHelper
       'Teste'
     end
   end
+  
 end
