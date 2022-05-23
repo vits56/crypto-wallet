@@ -30,6 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 pt-BR:
+  actual_locale: "Português (Brasil)"
   hello: "Olá mundo"
   links:
     edit: "Editar"
