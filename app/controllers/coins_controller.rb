@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CoinsController < ApplicationController
-  layout 'adm'
+  # layout 'adm'
   before_action :set_coin, only: %i[show edit update destroy]
   before_action :set_mining_type_options, only: %i[new edit create update]
 
