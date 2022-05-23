@@ -30,7 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 pt-BR:
-  actual_locale: "Português (Brasil)"
+  current_locale: "Português (Brasil)"
+  welcome: "Seja Bem-Vindo!"
+  messages:
+    welcome: "Este é o Crypto Wallet, uma app para você Cadastrar e acompanhar suas criptomoedas."
+    menu: "Para começar, selecione uma das opções abaixo:"
   hello: "Olá mundo"
   links:
     edit: "Editar"
