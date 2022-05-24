@@ -42,6 +42,9 @@ gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
 gem 'rubocop', require: false
 gem 'tty-spinner'
 gem 'webpacker'
+gem 'jquery-rails'
+gem 'popper_js', '~> 2.9.3'
+gem 'bootstrap', '~> 5.1.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
