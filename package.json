@@ -7,8 +7,7 @@
     "jquery": "^3.6.0",
     "notify-js-legacy": "^0.4.1",
     "popper.js": "^1.16.1",
-    "webpack": "^5.72.1",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^5.72.1"
   },
   "version": "1.0.0",
   "main": "index.js",
@@ -16,6 +15,7 @@
   "author": "bruno bastos duarte <bastosduartebruno@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^3"
   }
 }
