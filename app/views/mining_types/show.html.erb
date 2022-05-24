@@ -1,13 +1,22 @@
 <p id="notice"><%= notice %></p>
 <form>
-  <div class="form-group">
-    <%= label_tag nil,@mining_type.class.human_attribute_name(:description) %>
-    <%= text_field_tag nil, @mining_type.description, class:"form-control", disabled: true %>
+  <div class="form-group text-center">
+    <h2><%= label_tag nil,@mining_type.class.human_attribute_name(:description) %></h2>
+    <%= text_field_tag nil, @mining_type.description, class:"form-control text-center", disabled: true %>
   </div>
-  <div class="form-group">
-    <%= label_tag nil, @mining_type.class.human_attribute_name(:acronym)%>
-    <%= text_field_tag nil, @mining_type.acronym, class:"form-control", disabled: true %>
+  <br>
+  <br>
+  <div class="form-group text-center">
+    <h2><%= label_tag nil, @mining_type.class.human_attribute_name(:acronym)%></h2>
+    <%= text_field_tag nil, @mining_type.acronym, class:"form-control text-center", disabled: true %>
   </div>
 </form>
-<%= link_to t('links.edit'), edit_mining_type_path(@mining_type), class:"btn btn-primary" %> |
-<%= link_to t('links.back'), mining_types_path, class:"btn btn-primary" %>
+<br>
+<div class="text-center">
+  <%= link_to t('links.edit'), edit_mining_type_path(@mining_type), class:"btn btn-primary" %>
+</div>
+<br>
+<br>
+<div class="text-center">
+  <%= link_to t('links.back'), mining_types_path, class:"btn btn-primary" %>
+</div>
